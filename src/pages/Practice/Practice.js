@@ -1,13 +1,12 @@
 import Sidebar from '../../components/Sidebar/Sidebar'
-import { Outlet } from 'react-router-dom'
-import SidebarItems from './TwoSidebarItems'
+import SidebarItems from './PracticeSidebarItems'
+import { Outlet, useNavigate } from 'react-router'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router'
 
-const Two = () => {
+const Practice = () => {
   const navigate = useNavigate()
   useEffect(() => {
-    navigate('/ml-two/styled-components')
+    navigate('/practice/session-1')
   }, [])
   return (
     <article className="flex h-screen">
@@ -19,4 +18,4 @@ const Two = () => {
   )
 }
 
-export default Two
+export default Practice

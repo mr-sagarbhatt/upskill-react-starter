@@ -8,6 +8,10 @@ const SidebarItems = [
     name: 'states',
     route: pre + '/states',
   },
+  {
+    name: 'components',
+    route: pre + '/components',
+  },
 ]
 
 export default SidebarItems
