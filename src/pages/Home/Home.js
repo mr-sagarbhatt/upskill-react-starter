@@ -6,6 +6,9 @@ const Home = () => {
     <section className="m-4">
       {/* <div className="text-center text-2xl text-sky-600 mt-4">Upskill Fest: React</div> */}
       <div className="flex flex-col">
+        <a className="underline text-sky-600" href="https://reactjs.org/docs/getting-started.html" target="_blank">
+          React Docs
+        </a>
         <a
           className="underline text-sky-600"
           href="https://upskill.zohocreatorportal.com/pratik.radixweb/rx-learning-test/record-summary/Available_Courses/3790080000000082088"
@@ -21,9 +24,6 @@ const Home = () => {
         <p className="text-lg font-bold">Extra Links:</p>
         <a className="underline" href="https://upskill.zohocreatorportal.com/#Dashboard" target="_blank">
           Zoho Dashboard
-        </a>
-        <a className="underline" href="https://reactjs.org/docs/getting-started.html" target="_blank">
-          React Docs
         </a>
       </div>
     </section>

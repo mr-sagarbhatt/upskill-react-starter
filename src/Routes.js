@@ -10,6 +10,8 @@ import StyledComponent from './components/Two/StyledComponent'
 import Components from './components/One/Components'
 import SessionOne from './components/Practice/One'
 
+import { SessionOneProvider } from './context/session-one'
+
 export default () => {
   return (
     <Router>
@@ -25,7 +27,14 @@ export default () => {
           <Route path="styled-components" element={<StyledComponent></StyledComponent>} />
         </Route>
         <Route path="/practice" element={<Practice></Practice>}>
-          <Route path="session-1" element={<SessionOne></SessionOne>} />
+          <Route
+            path="session-1"
+            element={
+              <SessionOneProvider>
+                <SessionOne></SessionOne>
+              </SessionOneProvider>
+            }
+          />
         </Route>
       </Routes>
     </Router>
