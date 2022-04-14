@@ -1,9 +1,8 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 // * Wrapper component
 const Container = styled.article`
-  display: flex;
-  flex-direction: column;
   padding: 0 4vw;
 `
 
@@ -26,8 +25,12 @@ const BtnDark = styled(Btn)`
   color: #fff;
   background-color: #202020;
 `
+const StyledLink = styled(Link)`
+  text-decoration: underline;
+  color: blue;
+`
 
-export { Container, Heading1, Btn, BtnDark }
+export { Container, Heading1, Btn, BtnDark, StyledLink }
 
 /**
  The CSS rules are automatically vendor prefixed, styled-components takes care of that for you!

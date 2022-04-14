@@ -12,21 +12,21 @@ const Home = () => {
         <a className="underline text-sky-600" href="https://styled-components.com/docs/basics" target="_blank">
           Styled Components Docs
         </a>
-        <a
-          className="underline text-sky-600"
-          href="https://upskill.zohocreatorportal.com/pratik.radixweb/rx-learning-test/record-summary/Available_Courses/3790080000000082088"
-          target="_blank"
-        >
-          React Starter Course
-        </a>
-        <a className="underline text-sky-600" href="https://github.com/saiyed-radix/react-starter" target="_blank">
-          Github
-        </a>
       </div>
       <div className="fixed bottom-0 flex flex-wrap gap-4 right-0 m-4">
         <p className="text-lg font-bold">Extra Links:</p>
         <a className="underline" href="https://upskill.zohocreatorportal.com/#Dashboard" target="_blank">
           Zoho Dashboard
+        </a>
+        <a
+          className="underline"
+          href="https://upskill.zohocreatorportal.com/pratik.radixweb/rx-learning-test/record-summary/Available_Courses/3790080000000082088"
+          target="_blank"
+        >
+          React Starter Course
+        </a>
+        <a className="underline" href="https://github.com/saiyed-radix/react-starter" target="_blank">
+          Github
         </a>
       </div>
     </section>
