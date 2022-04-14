@@ -9,6 +9,9 @@ const Home = () => {
         <a className="underline text-sky-600" href="https://reactjs.org/docs/getting-started.html" target="_blank">
           React Docs
         </a>
+        <a className="underline text-sky-600" href="https://styled-components.com/docs/basics" target="_blank">
+          Styled Components Docs
+        </a>
         <a
           className="underline text-sky-600"
           href="https://upskill.zohocreatorportal.com/pratik.radixweb/rx-learning-test/record-summary/Available_Courses/3790080000000082088"
