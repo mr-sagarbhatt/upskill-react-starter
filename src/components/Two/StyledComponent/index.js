@@ -1,4 +1,15 @@
-import { Container, Heading1, Btn, BtnDark, StyledLink } from './components'
+import {
+  Container,
+  Heading1,
+  Btn,
+  BtnDark,
+  StyledLink,
+  CheckBox,
+  CheckBoxLabel,
+  ParentDiv,
+  ChildDiv,
+  Input,
+} from './components'
 
 const Index = () => {
   return (
@@ -10,9 +21,23 @@ const Index = () => {
       {/* // * use the "as" polymorphic prop to dynamically swap out the element that receives the styles you wrote */}
       <BtnDark as="a">Link</BtnDark>
       <div>
-        <StyledLink to="/" target="_blank">
+        <StyledLink className="home" to="/" target="_blank">
           Home
         </StyledLink>
+        <div className="flex gap-2 place-items-center">
+          <CheckBox></CheckBox>
+          <CheckBoxLabel>styled checkbox</CheckBoxLabel>
+        </div>
+        <ParentDiv>
+          Parent Div
+          <ChildDiv className="children">Child Div</ChildDiv>
+          <ChildDiv>Child Div</ChildDiv>
+        </ParentDiv>
+      </div>
+      <div>
+        <Input placeholder="A small text input" />
+        <br />
+        <Input placeholder="A bigger text input" size="1.2sem" />
       </div>
     </Container>
   )
