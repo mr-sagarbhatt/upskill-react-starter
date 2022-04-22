@@ -9,8 +9,8 @@ const Practice = () => {
     navigate('/practice/session-1')
   }, [])
   return (
-    <article className="flex h-screen">
-      <section className="w-full p-4 bg-zinc-50">
+    <article className="flex min-h-[calc(100vh-56px)] flex-col lg:flex-row">
+      <section className="w-full p-4 bg-zinc-50 order-2 lg:-order-none">
         <Outlet />
       </section>
       <Sidebar SidebarItems={SidebarItems}></Sidebar>

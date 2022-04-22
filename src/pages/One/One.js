@@ -10,8 +10,8 @@ const One = () => {
   }, [])
 
   return (
-    <article className="flex h-screen">
-      <section className="w-full bg-zinc-50 p-4">
+    <article className="flex min-h-[calc(100vh-56px)] flex-col lg:flex-row">
+      <section className="w-full bg-zinc-50 p-4 order-2 lg:-order-none">
         <Outlet />
       </section>
       <Sidebar SidebarItems={SidebarItems}></Sidebar>
