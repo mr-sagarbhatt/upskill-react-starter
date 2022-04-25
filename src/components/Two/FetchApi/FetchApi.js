@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import WithLoading from './HOC/WithLoading'
+import ListApiData from './ListApiData'
+
+const ListWithLoading = WithLoading(ListApiData)
 
 export default class FetchApi extends Component {
   state = {
@@ -19,36 +23,6 @@ export default class FetchApi extends Component {
   }
 
   render() {
-    return (
-      <>
-        {this.state.loading ? (
-          <section>Loading...</section>
-        ) : (
-          <section>
-            <h1>User Posts</h1>
-            <table>
-              <thead>
-                <tr>
-                  <th>Id</th>
-                  <th>Title</th>
-                  <th>Body</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.posts
-                  .filter((item, i) => i < 10)
-                  .map((item, i) => (
-                    <tr key={i}>
-                      <td>{item.id}</td>
-                      <td>{item.title}</td>
-                      <td>{item.body}</td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          </section>
-        )}
-      </>
-    )
+    return <ListWithLoading isLoading={this.state.loading} posts={this.state.posts} />
   }
 }

@@ -7,6 +7,7 @@ import Practice from './pages/Practice/Practice'
 import StyledComponent from './components/Two/StyledComponent'
 import SessionOne from './components/Practice/One'
 import FetchApi from './components/Two/FetchApi/FetchApi'
+import Slider from './components/Slider/Slider'
 
 import { SessionOneProvider } from './context/session-one'
 
@@ -30,6 +31,7 @@ export default () => {
               </SessionOneProvider>
             }
           />
+          <Route path="slider" element={<Slider></Slider>} />
         </Route>
       </Routes>
     </Router>
