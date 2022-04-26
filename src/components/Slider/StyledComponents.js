@@ -71,3 +71,7 @@ const Dots = styled.div`
 `
 
 export { MainSlider, SliderContent, Slide, Arrow, Dot, Dots }
+
+/**
+ * REF: https://betterprogramming.pub/build-an-image-slider-with-react-es6-264368de68e4
+ */

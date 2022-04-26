@@ -43,13 +43,13 @@ export default () => {
             element={
               <Slider
                 images={images}
-                sliderHeight="50%"
+                sliderHeight="50vh"
                 sliderWidth="100%"
                 bgArrow="white"
                 colorArrow="black"
                 bgSlideDots="white"
                 activeSlide="black"
-                transitionTime="0.5"
+                transitionTime="1"
               ></Slider>
             }
           />
