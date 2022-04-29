@@ -9,6 +9,10 @@ const sidebar = [
     name: 'Slider',
     route: pre + '/slider',
   },
+  {
+    name: 'Pagination',
+    route: pre + '/pagination',
+  },
 ]
 
 export default sidebar

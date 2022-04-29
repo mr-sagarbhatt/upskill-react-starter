@@ -8,6 +8,7 @@ import StyledComponent from './components/Two/StyledComponent'
 import SessionOne from './components/Practice/One'
 import FetchApi from './components/Two/FetchApi/FetchApi'
 import Slider from './components/Slider/Slider'
+import Pagination from './components/Pagination/Data'
 
 import { SessionOneProvider } from './context/session-one'
 
@@ -54,6 +55,7 @@ export default () => {
             }
           />
         </Route>
+        <Route path="pagination" element={<Pagination></Pagination>}></Route>
       </Routes>
     </Router>
   )
