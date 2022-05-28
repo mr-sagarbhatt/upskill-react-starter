@@ -8,6 +8,14 @@ const SidebarItems = [
     name: 'Fetch API',
     route: pre + '/fetch-api',
   },
+  {
+    name: 'Debug',
+    route: pre + '/debug',
+  },
+  {
+    name: 'Deploy',
+    route: pre + '/deploy',
+  },
 ]
 
 export default SidebarItems
