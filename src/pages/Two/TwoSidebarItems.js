@@ -1,6 +1,10 @@
 const pre = '/ml-two'
 const SidebarItems = [
   {
+    name: 'Topics',
+    route: pre + '/topics',
+  },
+  {
     name: 'Styled Components',
     route: pre + '/styled-components',
   },

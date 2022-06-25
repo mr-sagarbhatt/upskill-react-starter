@@ -3,12 +3,14 @@ import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 // * Milestone 1
 import MilestoneOne from './pages/One/One'
+import TopicsML1 from './components/One/Topics/Topics'
 // * Milestone 2
 import MilestoneTwo from './pages/Two/Two'
 import StyledComponent from './components/Two/StyledComponent'
 import FetchApi from './components/Two/FetchApi/FetchApi'
 import Debug from './components/Two/Debug/Debug'
 import Deploy from './components/Two/Deploy/Deploy'
+import TopicsML2 from './components/Two/Topics/Topics'
 // * Practice
 import Practice from './pages/Practice/Practice'
 import SessionOne from './components/Practice/One'
@@ -29,12 +31,15 @@ export default () => {
     <Router>
       <Header></Header>
       <Routes>
-        {/* // * Milestone 1 */}
         <Route path="/" element={<Home></Home>} />
+        {/* // * Milestone 1 */}
+        <Route path="/ml-one" element={<MilestoneOne></MilestoneOne>}>
+          <Route path="topics" element={<TopicsML1></TopicsML1>}></Route>
+        </Route>
         {/* // * Milestone 2 */}
-        <Route path="/ml-one" element={<MilestoneOne></MilestoneOne>}></Route>
         <Route path="/ml-two" element={<MilestoneTwo></MilestoneTwo>}>
-          <Route path="styled-components" element={<StyledComponent></StyledComponent>} />
+          <Route path="topics" element={<TopicsML2></TopicsML2>}></Route>
+          <Route path="styled-components" element={<StyledComponent></StyledComponent>}></Route>
           <Route path="fetch-api" element={<FetchApi></FetchApi>}></Route>
           <Route path="debug" element={<Debug></Debug>}></Route>
           <Route path="deploy" element={<Deploy></Deploy>}></Route>

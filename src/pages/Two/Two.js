@@ -1,14 +1,17 @@
-import Sidebar from '../../components/Sidebar/Sidebar'
-import { Outlet } from 'react-router-dom'
-import SidebarItems from './TwoSidebarItems'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import SidebarItems from './TwoSidebarItems'
 
 const Two = () => {
+  const location = useLocation()
   const navigate = useNavigate()
   useEffect(() => {
-    navigate('/ml-two/styled-components')
-  }, [])
+    if (location.pathname === '/ml-two') {
+      navigate('/ml-two/topics')
+    }
+  }, [location])
+
   return (
     <article className="flex min-h-[calc(100vh-56px)] flex-col lg:flex-row">
       <section className="w-full p-4 bg-zinc-50 order-2 lg:-order-none">
