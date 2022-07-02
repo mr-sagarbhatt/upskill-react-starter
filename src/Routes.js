@@ -16,6 +16,10 @@ import Practice from './pages/Practice/Practice'
 import SessionOne from './components/Practice/One'
 import Slider from './components/Slider/Slider'
 import Pagination from './components/Pagination/Data'
+// * Exercise
+import Exercise from './pages/Exercise/Exercise'
+// * 404 Error
+import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 import { SessionOneProvider } from './context/session-one'
 
@@ -70,7 +74,9 @@ export default () => {
             }
           />
         </Route>
-        <Route path="pagination" element={<Pagination></Pagination>}></Route>
+        {/* // * Exercise */}
+        <Route path="exercise" element={<Exercise></Exercise>}></Route>
+        <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </Router>
   )

@@ -8,6 +8,7 @@ export default class FetchApi extends Component {
   state = {
     posts: [],
     loading: false,
+    error: '',
   }
   componentDidMount() {
     this.fetchData()
@@ -15,14 +16,24 @@ export default class FetchApi extends Component {
 
   fetchData = async () => {
     this.setState({ loading: true })
-    const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json()
-    this.setState({
-      posts,
-      loading: false,
-    })
+    try {
+      const posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json()
+      this.setState({
+        posts,
+        loading: false,
+      })
+    } catch (e) {
+      console.log(`Fetch API Error ==>`, e)
+      this.setState({
+        loading: false,
+        error: 'Something went wrong, Please try again later..!',
+      })
+    }
   }
 
   render() {
+    if (this.state.error.length > 0) return <section>{this.state.error}</section>
+
     return <ListWithLoading isLoading={this.state.loading} posts={this.state.posts} />
   }
 }

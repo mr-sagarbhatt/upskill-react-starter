@@ -4,13 +4,13 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import SidebarItems from './PracticeSidebarItems'
 
 const Practice = () => {
-  const location = useLocation()
-  const navigate = useNavigate()
-  useEffect(() => {
-    if (location.pathname === '/practice') {
-      navigate('/practice/session-1')
-    }
-  }, [location])
+  // const location = useLocation()
+  // const navigate = useNavigate()
+  // useEffect(() => {
+  //   if (location.pathname === '/practice') {
+  //     navigate('/practice/session-1')
+  //   }
+  // }, [location])
 
   return (
     <article className="flex min-h-[calc(100vh-56px)] flex-col lg:flex-row">
