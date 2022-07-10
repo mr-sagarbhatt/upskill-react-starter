@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home/Home'
 // * Milestone 1
@@ -15,13 +15,13 @@ import TopicsML2 from './components/Two/Topics/Topics'
 import Practice from './pages/Practice/Practice'
 import SessionOne from './components/Practice/One'
 import Slider from './components/Slider/Slider'
-import Pagination from './components/Pagination/Data'
 // * Exercise
 import Exercise from './pages/Exercise/Exercise'
 // * 404 Error
 import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 import { SessionOneProvider } from './context/session-one'
+import UserForm from './components/Form/UserForm/UserForm'
 
 export default () => {
   const images = [
@@ -76,6 +76,7 @@ export default () => {
         </Route>
         {/* // * Exercise */}
         <Route path="exercise" element={<Exercise></Exercise>}></Route>
+        <Route path="exercise/add" element={<UserForm></UserForm>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </Router>

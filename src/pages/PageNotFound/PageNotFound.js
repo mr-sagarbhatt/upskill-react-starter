@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Button from '../../components/Button/Button'
 
 const PageNotFound = () => {
   return (
@@ -19,11 +20,8 @@ const PageNotFound = () => {
                   The page you are looking for is not available!
                 </p>
 
-                <Link
-                  to="/"
-                  className="text-white py-3 px-5 bg-black my-5 mx-0 inline-block hover:text-[color:#7dd3fc] transition-colors duration-300"
-                >
-                  Go to Home
+                <Link to="/">
+                  <Button className="my-5">Go to Home</Button>
                 </Link>
               </div>
             </div>

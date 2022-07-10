@@ -1,12 +1,30 @@
+import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import './Header.css'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Header = () => {
   const location = useLocation()
+  const [header, setHeader] = useState(false)
+
+  const handleHeader = () => {
+    setHeader((prev) => !prev)
+  }
 
   return (
     <nav className="p-4 md:text-xl bg-zinc-800 nav">
-      <ul className="flex flex-wrap gap-2 place-items-center place-content-center header flex-col md:flex-row">
+      <div onClick={handleHeader}>
+        {header ? (
+          <FaTimes className="md:hidden" color="white"></FaTimes>
+        ) : (
+          <FaBars className="md:hidden" color="white"></FaBars>
+        )}
+      </div>
+      <ul
+        className={`flex gap-2 place-items-center place-content-center header flex-col md:flex-row ${
+          header ? 'flex' : 'hidden md:flex'
+        }`}
+      >
         <li>
           <NavLink
             to="/"
