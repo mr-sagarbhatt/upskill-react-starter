@@ -22,8 +22,8 @@ const FormNationality = ({ label, onChange, id, errorMessage, defaultOption, req
             {defaultOption}
           </option>
           {Nationalities.countries.map((nationality, index) => (
-            <option className="text-base" value={nationality.isoCode} key={index}>
-              {nationality.flag} {nationality.nationality}
+            <option className="text-base" value={nationality.nationality} key={index}>
+              {nationality.nationality}
             </option>
           ))}
         </select>

@@ -2,15 +2,18 @@ import React, { useState } from 'react'
 import { validateFormValues } from '../../../utils/UserFormValidation'
 import { FormInput, FormNationality } from '../Form'
 import Button from '../../Button/Button'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
-const UserForm = () => {
+const UserForm = ({ fnAddUser, showEditForm, editUser, fnEditUser }) => {
+  const navigate = useNavigate()
   // *********** FORM VALUES ***********
   const initialValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    nationality: '',
+    firstName: showEditForm ? editUser?.firstName : '',
+    lastName: showEditForm ? editUser?.lastName : '',
+    email: showEditForm ? editUser?.email : '',
+    phone: showEditForm ? editUser?.phone : '',
+    nationality: showEditForm ? editUser?.nationality : '',
   }
   const [formValues, setFormValues] = useState(initialValues)
   // *********** FORM ERRORS ***********
@@ -39,6 +42,16 @@ const UserForm = () => {
     // * FORM SUBMIT ON TRUE *
     setIsSubmit(true)
   }
+
+  useEffect(() => {
+    if (isSubmit && Object.keys(formErrors).length === 0) {
+      if (showEditForm) {
+        fnEditUser({ id: editUser.id, ...formValues })
+      } else {
+        fnAddUser(formValues)
+      }
+    }
+  }, [isSubmit, formValues, formErrors])
 
   const inputs = [
     {

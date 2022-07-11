@@ -21,7 +21,6 @@ import Exercise from './pages/Exercise/Exercise'
 import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 import { SessionOneProvider } from './context/session-one'
-import UserForm from './components/Form/UserForm/UserForm'
 
 export default () => {
   const images = [
@@ -76,7 +75,6 @@ export default () => {
         </Route>
         {/* // * Exercise */}
         <Route path="exercise" element={<Exercise></Exercise>}></Route>
-        <Route path="exercise/add" element={<UserForm></UserForm>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
     </Router>
